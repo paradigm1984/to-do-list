@@ -1,6 +1,3 @@
-// dont put a semi colon after the ends of functions!!!
-
-
 // runs the function on an event listener which is specified as a
 // click. the event listener takes in what triggers it, and what
 // happens when its triggered as agruments.
@@ -21,7 +18,6 @@ window.addEventListener('load', function() {
 
 	// ADDS SOMETHING NEW TO THE LIST
 	function addItem(text) {
-
 
 		// finds the toDo ul by id
 		var list = document.getElementById('toDo');
@@ -53,7 +49,6 @@ window.addEventListener('load', function() {
 		removeIcon.classList.add('remove');
 		removeIcon.innerHTML = removeSvg;
 
-
 		// throws it into the HTML in its appropriate spot.
 		
 		list.appendChild(listSlot);
@@ -76,9 +71,7 @@ window.addEventListener('load', function() {
 		// event listenere for the complete function
 		completeIcon.addEventListener('click', completeItem);
 
-
 	} // END addItem()
-
 
 	// button for addItem()
 	document.getElementById('addButton').addEventListener('click', function() {
@@ -91,9 +84,8 @@ window.addEventListener('load', function() {
 		document.getElementById('itemField').value = '';
 
 	});
-
 	
-	// REMOVES THE SELECTED SOMETHING FROM THE LIST
+	// REMOVES THE SELECTED SOMETHING FROM THE LIST //
 	function deleteItem() {
 
 		// set variables to the parent and child to delete the child from the parent
@@ -105,10 +97,7 @@ window.addEventListener('load', function() {
 		console.log('trashed!');
 	};
 
-
-	// MOVES THE SELECTED SOMETHING TO THE COMPLETE LIST
-	// https://youtu.be/2wCpkOk2uCg?t=57m44s
-
+	// MOVES THE SELECTED SOMETHING TO THE COMPLETE LIST //
 	function completeItem() {
 
 		var item = this.parentNode.parentNode;
@@ -139,10 +128,7 @@ window.addEventListener('load', function() {
 		// if else statement in the same way that removeitem() works
 		target.insertBefore(item, target.childNodes[0]);
 
-
-
-		console.log('moved!');
-
+		// console.log('moved!');
 	};
 
 	var addButton = document.getElementById('addButton');
@@ -168,16 +154,5 @@ window.addEventListener('load', function() {
 
 	} // END toggleTitle();
 
-
-
-
-
-
-
-
-
 }); // END window.addEventListener('onload')
-
-
-
 
