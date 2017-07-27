@@ -23,7 +23,7 @@ font-family: 'Poppins', sans-serif;
 	background-color: #2EA080;
 	width: 100%;
 	height: 25px;
-	position: fixed;
+	position: relative;
 	top: 0;
 	left: 0;
 	z-index: 5;
