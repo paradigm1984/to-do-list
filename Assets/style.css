@@ -19,15 +19,35 @@ font-family: 'Poppins', sans-serif;
 	padding: 80px 0px 0px 0px;
 }
 
-header.top-bar {
+.title-box {
+	background-color: #2EA080;
+	width: 100%;
+	height: 25px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+}
+
+.title {
+	text-align: center;
+	color: white;
+	margin: 1.2%;
+	font-size: 1.5em;
+	font-family: 'Poppins', sans-serif;
+	z-index: 6;
+}
+
+
+.top-bar {
 
 	width: 100%;
 	height: 80px;
 	padding: 15px;
 	position: fixed;
-	top: 0;
+	top: 25px;
 	left: 0;
-	z-index: 5;
+	z-index: 4;
 	background-color: #2EA080;
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
@@ -158,7 +178,13 @@ svg.complete {
 	text-align: center;
 	font-size: 1.2em;
 	letter-spacing: .05em;
+	margin-top: 25px;
 }
+
+ .hidden {
+    display: none;
+}
+
 
 .footer {
 	
@@ -169,4 +195,14 @@ svg.complete {
   	bottom: 0px;
   	background-color: #2EA080;
 }
+
+.footer-text {
+	
+	font-family: 'Poppins', sans-serif;
+	font-weight: bolder;
+	text-align: center;
+	color: white;
+	margin: 1.5%;
+}
+
 

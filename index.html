@@ -26,17 +26,20 @@
 	</head>
 
 	<body id="bod">
-
-		<header class="top-bar"> 
-a			<input class="header-input" type="text" placeholder="Enter an activity..." id="itemField">
+		
+		<header class="container title-box">
+			<h1 class="title"> To Do List! </h1> 
+		</header>
+		<div class="top-bar">
+			<input class="header-input" type="text" placeholder="Enter an activity..." id="itemField">
 			<button class="submit-top" id="addButton">
 				<!-- plus sign icon -->
 				<svg version="1.1" id="plus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="22px" viewBox="0 0 287.506 287.506" enable-background="new 0 0 287.506 287.506" xml:space="preserve"><g><path fill="#2D232E" d="M200.095,173.733c-14.474,0-21.192-0.518-23.777,2.067c-3.102,3.102-2.584,9.82-2.584,24.294v53.812c0,23.261,2.584,33.599-29.98,33.599s-29.98-10.338-29.98-33.599v-53.812c0-14.474,1.034-21.709-2.067-24.294s-9.821-2.067-24.294-2.067H33.598c-23.26,0-33.598,2.584-33.598-29.98s10.338-29.98,33.598-29.98h53.813c14.473,0,21.192,0.518,24.294-2.584c2.585-2.584,2.067-9.304,2.067-23.777V33.598c0-23.26-2.584-33.598,29.98-33.598s29.98,10.338,29.98,33.598v53.813c0,14.473,0,20.676,2.584,23.777c2.584,3.102,9.303,2.584,23.777,2.584h53.812c23.261,0,33.599-2.584,33.599,29.98s-10.338,29.98-33.599,29.98H200.095z"/></g></svg>
 			</button><!--END "submit-top" -->
-		</header><!--END "top-bar" -->
+		</div><!--END "top-bar" -->
 
 		<div class="container">
-			<h1 class="section-header" id="toDoHeader"> To Do: </h1> <!-- use the id to give it a relative postiion-->
+			<h1 class="hidden" id="toDoHeader"> To Do: </h1> <!-- use the id to give it a relative postiion-->
 
 			<!--  incomplete tasks  -->
 			<ul class="to-do" id="toDo"> 
@@ -44,7 +47,7 @@ a			<input class="header-input" type="text" placeholder="Enter an activity..." i
 			</ul>
 
 			<div class="container"></div> <!-- Spacer -->
-			<h1 class="section-header" id="completeHeader"> Complete: </h1> <!-- use the id to give it a relative postiion -->
+			<h1 class="hidden" id="completeHeader"> Complete: </h1> <!-- use the id to give it a relative postiion -->
 
 			 <!--complete tasks -->
 			<ul class="to-do" id="complete">
@@ -52,7 +55,7 @@ a			<input class="header-input" type="text" placeholder="Enter an activity..." i
 			</ul>	
 		</div>
 		<footer class="footer"> 
-		 	<p>Daniel Blanco / 2017</p>
+		 	<p class="footer-text">Daniel Blanco / 2017</p>
 		 </footer>
 	
 	

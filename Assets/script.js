@@ -145,7 +145,28 @@ window.addEventListener('load', function() {
 
 	};
 
+	var addButton = document.getElementById('addButton');
+	addButton.addEventListener('click', toggleTitle);
 
+	function toggleTitle() {
+		var toDoTitle = document.getElementById('toDoHeader');
+		var completeTitle = document.getElementById('completeHeader');
+    	// if the li is filled, make the to do list show. else, nothing
+   		if(list.lenth <= 0) {
+   			showIt();
+    	} else {
+    		hideIt();
+    	}
+    
+	    function hideIt() {
+
+	    }
+
+	    function showIt() {
+
+	    }
+
+	} // END toggleTitle();
 
 
 
