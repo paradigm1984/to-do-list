@@ -10,6 +10,8 @@ A simple but functional to do list using a web browser. The list starts out empt
 3. Javascript
 4. Adobe Illustrator
 
+### Link:
+https://paradigm1984.github.io/to-do-list/
 
 ### To be added:
 In the future I will connect the application to a mysql database, so the items can be tracked. 
