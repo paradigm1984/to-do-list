@@ -2,14 +2,14 @@
 // click. the event listener takes in what triggers it, and what
 // happens when its triggered as agruments.
 // inside the function, it will add any text in the item field to
-// the to do list. 
+// the to do list.
 
 // waits for the window to load before it runs
-window.addEventListener('load', function() { 
+window.addEventListener('load', function() {
 
 
 	// remove and complete svgs into variables
-	var removeSvg = '<svg version="1.1" class="trash-bin" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="20px" height="20px" viewBox="-214.862 74.252 52.982 71.667"enable-background="new -214.862 74.252 52.982 71.667" xml:space="preserve"><g><path fill="#C01311" d="M-196.375,107.64v-1.596v5.693c0-4.72,0.23-6.817-2.663-6.817s-2.663,2.097-2.663,6.817v-5.693v1.596v19.796c0,4.72-0.229,6.817,2.663,6.817s2.663-2.097,2.663-6.817V107.64z"/><path fill="#C01311" d="M-185.708,107.64v-1.596v5.693c0-4.72,0.23-6.817-2.663-6.817c-2.892,0-2.663,2.097-2.663,6.817v-5.693v1.596v19.796c0,4.72-0.229,6.817,2.663,6.817c2.893,0,2.663-2.097,2.663-6.817V107.64z"/><path fill="#C01311" d="M-175.042,107.64v-1.596v5.693c0-4.72,0.23-6.817-2.663-6.817c-2.892,0-2.663,2.097-2.663,6.817v-5.693v1.596v19.796c0,4.72-0.229,6.817,2.663,6.817c2.893,0,2.663-2.097,2.663-6.817V107.64z"/></g><g><path fill="#C01311" d="M-172.38,145.919h-31.982c-3.86,0-7-3.14-7-7V94.587h45.982v44.333C-165.38,142.779-168.52,145.919-172.38,145.919z M-207.362,98.587v40.333c0,1.654,1.346,3,3,3h31.982c1.654,0,3-1.346,3-3V98.587H-207.362z"/></g><g><path fill="#C01311" d="M-179.538,85.657h-17.666v-6.834c0-2.52,1.51-4.57,3.366-4.57h10.935c1.855,0,3.365,2.05,3.365,4.57V85.657z M-193.865,81.159h11.015v-2.336l-10.987-0.072L-193.865,81.159z"/></g><g><path fill="#C01311" d="M-167.88,98.919h-40.982c-3.309,0-6-2.691-6-6v-4.666c0-3.309,2.691-6,6-6h40.982c3.309,0,6,2.691,6,6v4.666C-161.88,96.228-164.571,98.919-167.88,98.919z M-208.862,86.253c-1.103,0-2,0.897-2,2v4.666c0,1.103,0.897,2,2,2h40.982c1.103,0,2-0.897,2-2v-4.666c0-1.103-0.897-2-2-2H-208.862z"/></g></svg>';
+	var removeSvg = <svg version="1.1" class="trash-bin" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="20px" height="20px" viewBox="-214.862 74.252 52.982 71.667"enable-background="new -214.862 74.252 52.982 71.667" xml:space="preserve"><g><path fill="#C01311" d="M-196.375,107.64v-1.596v5.693c0-4.72,0.23-6.817-2.663-6.817s-2.663,2.097-2.663,6.817v-5.693v1.596v19.796c0,4.72-0.229,6.817,2.663,6.817s2.663-2.097,2.663-6.817V107.64z"/><path fill="#C01311" d="M-185.708,107.64v-1.596v5.693c0-4.72,0.23-6.817-2.663-6.817c-2.892,0-2.663,2.097-2.663,6.817v-5.693v1.596v19.796c0,4.72-0.229,6.817,2.663,6.817c2.893,0,2.663-2.097,2.663-6.817V107.64z"/><path fill="#C01311" d="M-175.042,107.64v-1.596v5.693c0-4.72,0.23-6.817-2.663-6.817c-2.892,0-2.663,2.097-2.663,6.817v-5.693v1.596v19.796c0,4.72-0.229,6.817,2.663,6.817c2.893,0,2.663-2.097,2.663-6.817V107.64z"/></g><g><path fill="#C01311" d="M-172.38,145.919h-31.982c-3.86,0-7-3.14-7-7V94.587h45.982v44.333C-165.38,142.779-168.52,145.919-172.38,145.919z M-207.362,98.587v40.333c0,1.654,1.346,3,3,3h31.982c1.654,0,3-1.346,3-3V98.587H-207.362z"/></g><g><path fill="#C01311" d="M-179.538,85.657h-17.666v-6.834c0-2.52,1.51-4.57,3.366-4.57h10.935c1.855,0,3.365,2.05,3.365,4.57V85.657z M-193.865,81.159h11.015v-2.336l-10.987-0.072L-193.865,81.159z"/></g><g><path fill="#C01311" d="M-167.88,98.919h-40.982c-3.309,0-6-2.691-6-6v-4.666c0-3.309,2.691-6,6-6h40.982c3.309,0,6,2.691,6,6v4.666C-161.88,96.228-164.571,98.919-167.88,98.919z M-208.862,86.253c-1.103,0-2,0.897-2,2v4.666c0,1.103,0.897,2,2,2h40.982c1.103,0,2-0.897,2-2v-4.666c0-1.103-0.897-2-2-2H-208.862z"/></g></svg>';
 	var completeSvg = '<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="20px" height="20px" viewBox="-131.205 -22.581 54.334 54.333"enable-background="new -131.205 -22.581 54.334 54.333" xml:space="preserve"><circle fill="none" stroke="#3FA180" stroke-width="3" stroke-miterlimit="10" cx="-104.038" cy="4.586" r="25.667"/><path fill="none" stroke="#3FA180" stroke-width="4" stroke-miterlimit="10" d="M-119.599,4.01c5.412,4.764,10.463,11.657,10.463,11.657S-94.651-1.801-89.603-4.767"/></svg>';
 
 	var completeIcon = document.createElement('complete');
@@ -50,14 +50,14 @@ window.addEventListener('load', function() {
 		removeIcon.innerHTML = removeSvg;
 
 		// throws it into the HTML in its appropriate spot.
-		
+
 		list.appendChild(listSlot);
 		listSlot.appendChild(paragraph);
 
 		completeContainer.appendChild(completeIcon);
-		
+
 		removeContainer.appendChild(removeIcon);
-	
+
 
 		listSlot.appendChild(removeContainer);
 		listSlot.appendChild(completeContainer);
@@ -84,7 +84,7 @@ window.addEventListener('load', function() {
 		document.getElementById('itemField').value = '';
 
 	});
-	
+
 	// REMOVES THE SELECTED SOMETHING FROM THE LIST //
 	function deleteItem() {
 
@@ -143,7 +143,7 @@ window.addEventListener('load', function() {
     	} else {
     		hideIt();
     	}
-    
+
 	    function hideIt() {
 
 	    }
@@ -155,4 +155,3 @@ window.addEventListener('load', function() {
 	} // END toggleTitle();
 
 }); // END window.addEventListener('onload')
-
